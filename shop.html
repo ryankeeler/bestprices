@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trippy Hippie - Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: url('images/mushroom-gummies-landscape_1000x.webp') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: rgba(76, 44, 79, 0.9);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 2rem;
+        }
+
+        .product {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            padding: 1rem;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .product p {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .product button {
+            background-color: #6a2c70;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+
+        .product button:hover {
+            background-color: #b83b5e;
+        }
+
+        footer {
+            background-color: rgba(76, 44, 79, 0.9);
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Trippy Hippie Shop</h1>
+        <p>Find the best mushroom-growing supplies and cultures here!</p>
+    </header>
+
+    <!-- Product Listings -->
+    <div class="product-container">
+        <!-- Product 1: 3-Pound Mushroom Substrate -->
+        <div class="product">
+            <img src="images/Coa Coa Choir Substrate Mix.webp" alt="3-Pound Mushroom Substrate">
+            <h3>3-Pound Mushroom Substrate</h3>
+            <p>Our high-quality, sterile 3-pound substrate mix is perfect for mushroom cultivation. This mix provides optimal moisture and nutrients to ensure healthy growth. Each bag is **sterilized** and handled with care.</p>
+            <p><strong>Price: $10.00 per bag</strong></p>
+            <button onclick="addToCart('3-Pound Mushroom Substrate', 10.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 2: Corn in a Jar Substrate -->
+        <div class="product">
+            <img src="images/corn in a jar substrate.webp" alt="Corn in a Jar Substrate">
+            <h3>Corn in a Jar Substrate</h3>
+            <p>This 1-quart jar of sterilized corn substrate is ideal for spawning. Corn provides excellent nutrient content, ensuring a strong and healthy mycelium network. All jars are **sterilized** and handled with care.</p>
+            <p><strong>Price: $20.00 per jar</strong></p>
+            <button onclick="addToCart('Corn in a Jar Substrate', 20.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 3: Jedi Mind Fuck Albino Liquid Culture -->
+        <div class="product">
+            <img src="images/jedi mind fuck albino.webp" alt="Jedi Mind Fuck Albino Liquid Culture">
+            <h3>Jedi Mind Fuck Albino Liquid Culture</h3>
+            <p>Premium 10ml syringe of Jedi Mind Fuck Albino liquid culture. Known for its potency and quick colonization, this strain is a favorite among growers. **Sterilized** and packaged with precision for quality assurance.</p>
+            <p><strong>Price: $25.00 per 10ml syringe</strong></p>
+            <button onclick="addToCart('Jedi Mind Fuck Albino Liquid Culture', 25.00)">Add to Cart</button>
+        </div>
+
+        <!-- Product 4: Penis Envy Liquid Culture -->
+        <div class="product">
+            <img src="images/penis envy.webp" alt="Penis Envy Liquid Culture">
+            <h3>Penis Envy Liquid Culture</h3>
+            <p>Our 10ml syringe of Penis Envy liquid culture delivers one of the most sought-after strains. Famous for its exceptional yield and potency, this liquid culture is **sterilized** and carefully prepared for optimal results.</p>
+            <p><strong>Price: $25.00 per 10ml syringe</strong></p>
+            <button onclick="addToCart('Penis Envy Liquid Culture', 25.00)">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Trippy Hippie. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${name} has been added to your cart!`);
+        }
+    </script>
+</body>
+</html>
