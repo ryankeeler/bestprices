@@ -1,0 +1,93 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #4c2c4f;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.about-content h2, .newsletter h2 {
+    color: #4c2c4f;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content li a {
+    text-decoration: none;
+    color: #4c2c4f;
+    font-weight: bold;
+}
+
+/* Newsletter Section */
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.newsletter input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 250px;
+}
+
+.newsletter button {
+    padding: 0.5rem 1rem;
+    background-color: #6a2c70;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.newsletter button:hover {
+    background-color: #b83b5e;
+}
+
+#form-message {
+    margin-top: 1rem;
+    color: green;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #4c2c4f;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
